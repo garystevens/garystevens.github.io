@@ -1,0 +1,68 @@
+body{
+    font-family: "Courier New", Courier, monospace;
+    background-color: #143317;
+    //background-image: linear-gradient(hsla(0,0%,100%,.04) 50%,#000 50%);
+    background-image: linear-gradient(to bottom, #143317, #143317 50%, #000 50%, #000);
+    background-size: 100% 4px;
+
+
+/* The rectangle in which to repeat.
+   It can be fully wide in this case */
+}
+
+.glitch{
+    color: #9FFD83;
+    font-size:40px;
+    position:relative;
+    margin:0 auto;
+    filter: blur(0.1px);
+    text-shadow: 4px 0 3px rgba(0,255,255,.8),0 4px 3px rgba(255,0,255,.8),-4px 0 3px rgba(0,255,127,.8),0 -4px 3px rgba(220,20,60,.8);
+
+    &:after {
+        content:attr(data-text);
+        position:absolute;
+        left:2px;
+        top:0;
+        color:white;
+        overflow:hidden;
+        animation:noise-anim 4s infinite linear alternate-reverse;
+    }
+
+    &:before {
+        content:attr(data-text);
+        position:absolute;
+        left:-2px;
+        top:0;
+        color:#2DCA4A;
+        overflow:hidden;
+        clip:rect(0,900px,0,0);
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
+}
+
+@keyframes noise-anim-2{
+    $steps:20;
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,999px,random(100)+px,0);
+        }
+    }
+}
+
+@keyframes noise-anim{
+    $steps:20;
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            clip:rect(random(100)+px,999px,random(100)+px,0);
+        }
+    }
+}
+
+h2 {
+    font-size: 32px;
+    background-size: 16px;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #9ffd83, #2dca4a 50%, #000 50%, #000);
+}
