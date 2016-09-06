@@ -12,10 +12,12 @@
 
             <div class="glitch" data-text="@garymstevens">usr/garymstevens</div>
 
-            <div style="color: #9ffd83; clear: both; width: 100%; position: absolute; bottom: 50px; overflow: hidden">
-                <div> /home </div>
-                <div ng-repeat="item in vm.history" style="padding: 5px 0;">
-                    {{ item.term }}<br/>
+            <div style="position: absolute; bottom: 0; height: 93%; width: 100%; overflow: hidden">
+                <div style="color: #9ffd83; clear: both; width: 100%; position: absolute; bottom: 50px; overflow: hidden">
+                    <div> /home </div>
+                    <div ng-repeat="item in vm.history" style="padding: 5px 0;">
+                        {{ item.term }}<br/>
+                    </div>
                 </div>
             </div>
 

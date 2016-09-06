@@ -10,7 +10,9 @@
             var searchTerms = {
                 'about': {
 					'responses': [
-						'test'
+						'test',
+						' ',
+						' /home '
 					]
 				},
 				'start': {
@@ -21,7 +23,8 @@
 						'.......',
 						'PROCESSING',
 						'END',
-						' '
+						' ',
+						' /home '
 					]
 				},
                 'work': {
@@ -34,6 +37,8 @@
 						'six',
 						'seven',
 						'eight...',
+						' ',
+						' /home '
 					]
 				},
                 'contact': {
@@ -41,7 +46,8 @@
 						'email: garymstevens@gmail.com',
 						'twitter: @garymstevens',
 						'github: https://github.com/garystevens',
-						' '
+						' ',
+						' /home '
 					]
 				},
 				'help': {
@@ -51,13 +57,15 @@
 						'work',
 						'contact',
 						'about',
-						' '
+						' ',
+						' /home '
 					]
 				},
 				'cd ../': {
 					'responses': [
 						'nice try',
-						' '
+						' ',
+						' /home '
 					]
 				}
             };
