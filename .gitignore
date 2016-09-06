@@ -1,5 +1,5 @@
-node_modules/
+/node_modules/
 .sass-cache/
 npm-debug.log
-public/javascript/
-public/css/
+/public/javascript/*
+/public/styles/*

@@ -9,7 +9,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var stylish = require('jshint-stylish');
 var jshint = require('gulp-jshint');
-var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 
 // set distribution directory

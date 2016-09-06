@@ -8,25 +8,66 @@
         function ProfileService($q){
 
             var searchTerms = {
-                'about': '/about',
-                'work': '/work',
-                'contact': '/contact'
+                'about': {
+					'responses': [
+						'test'
+					]
+				},
+				'start': {
+					'responses': [
+						'welcome',
+						'type "help" for more',
+						'information',
+						'.......',
+						'PROCESSING',
+						'END',
+						' '
+					]
+				},
+                'work': {
+					'responses': [
+						'one',
+						'two',
+						'three',
+						'...four',
+						'five',
+						'six',
+						'seven',
+						'eight...',
+					]
+				},
+                'contact': {
+					'responses': [
+						'email: garymstevens@gmail.com',
+						'twitter: @garymstevens',
+						'github: https://github.com/garystevens',
+						' '
+					]
+				},
+				'help': {
+					'responses': [
+						'you can use the following commands...',
+						' ',
+						'work',
+						'contact',
+						'about',
+						' '
+					]
+				},
+				'cd ../': {
+					'responses': [
+						'nice try',
+						' '
+					]
+				}
             };
 
-            return {
-		        getProfileData: getProfileData
-		    };
-
-			function getProfileData(searchTerm){
-
-				//var deferred = $q.defer();
-
-	            //deferred.resolve(response);
-
-				//deferred.reject('Personalisation not set');
-
-				//return deferred.promise;
-                return "cunts";
+			function checkTerm(searchTerm){
+				return searchTerms[searchTerm];
 			}
+
+			return {
+				checkTerm: checkTerm
+		    };
         }
 })();
